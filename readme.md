@@ -97,12 +97,27 @@ The Birthday Genie app is designed to simplify birthday management and reminders
 
    ```bash
    git add .
-   git commit -m "Brief description of the change"
+   git commit -m "<type>: <subject>"
    ```
 
    - **Commit Message Guidelines**:
-     - Start with a verb (e.g., Add, Fix, Refactor).
-     - Be concise but descriptive.
+     - Use the format: `<type>: <subject>`
+     - Example: `git commit -m "chore: Setup Conventions"`
+     - **Types**:
+       - `feat`: New features
+       - `fix`: Bug fixes
+       - `docs`: Documentation changes
+       - `style`: Code style changes (e.g., formatting)
+       - `refactor`: Code refactoring
+       - `perf`: Performance improvements
+       - `test`: Adding or modifying tests
+       - `build`: Build system or dependency changes
+       - `ci`: Continuous integration changes
+       - `chore`: Maintenance tasks
+       - `revert`: Reverting previous changes
+     - **Subject**:
+       - Must be written in sentence case.
+       - Be concise but descriptive.
 
 6. **Pushing Changes**
 
