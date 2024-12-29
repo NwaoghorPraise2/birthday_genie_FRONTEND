@@ -4,6 +4,10 @@
 
 The Birthday Genie app is designed to simplify birthday management and reminders. It allows users to manage the birthdays and details of their loved ones, schedule personalized messages, and receive timely reminders. Additionally, it provides gift suggestions with vendor links and calendar synchronization to streamline user experience.
 
+## Figma File
+
+[Birthday App Design on Figma](https://www.figma.com/design/k3Bb59Eo60vbiQUmiopR2Q/Birthday-App?node-id=291-32254&p=f&t=ZhvsKGeS2MH0ooVm-0)
+
 ## Features
 
 ### Phase One
