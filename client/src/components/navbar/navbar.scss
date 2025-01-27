@@ -1,0 +1,158 @@
+@use "../../styles/utils" as *;
+
+.Navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+
+  @include sm {
+    padding: 10px 25px;
+  }
+
+  @include xsm {
+    padding: 10px 15px;
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    position: relative;
+    background-color: $color-white-200;
+    border-radius: 100px;
+    border: 1px solid #eef3f6;
+    
+    @include lg{
+      justify-content: space-evenly;
+    }
+
+    @include md{
+      justify-content: space-between;
+    }
+
+    a.logo_link {
+      width: calc(33.33% - 4px);
+
+      @include lg{
+        width: max-content;
+      }
+
+      .logo {
+        width: max-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100px;
+        border: 1px solid $color-white-100;
+        padding: 10px 16px;
+        background-color: $color-white-400;
+        gap: 10px;
+
+        img {
+          width: 28px;
+          height: 28px;
+          object-fit: contain;
+        }
+
+        span.title {
+          color: $color-primary-400;
+          font-weight: 500;
+          font-size: $font-display-xs;
+        }
+      }
+    }
+
+    .links {
+      width: calc(66.67% - 4px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      transition: $main-transition;
+
+      @include lg{
+        justify-content: center;
+      }
+
+      .pages,.utils {
+        width: max-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100px;
+        border: 1px solid $color-white-100;
+        padding: 10px 16px;
+        gap: 10px;
+        background-color: $color-white-400;
+      }
+      
+      .utils {
+        background-color: transparent;
+
+        img{
+          width: 36px;
+          height: 36px;
+          object-fit: contain;
+        }
+      }
+
+      @include lg {
+      }
+
+      @include md {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100vh;
+        width: 50%;
+        background-color: $color-white-400;
+        box-shadow: 1px 0px 10px 2px #00000010;
+        flex-direction: column;
+        gap: 30px;
+        z-index: 1200;
+
+        &.open {
+          left: 0;
+          justify-content: center;
+
+          .pages,.utils{
+            flex-direction: column;
+            border: none;
+            gap: 15px;
+          }
+        }
+      }
+
+      @include sm {
+        width: 75%;
+      }
+
+      @include xsm {
+        gap: 20px;
+      }
+    }
+
+    .iconBox {
+      display: none;
+
+      @include md {
+        display: block;
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+
+        @include xsm {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}

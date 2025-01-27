@@ -1,0 +1,153 @@
+@use "../../styles/utils" as *;
+
+a {
+  &.active {
+    .Button {
+      background-color: $color-primary-400;
+      color: $color-white-400;
+      border: 1px solid $color-primary-400;
+
+      &:hover {
+        background-color: $color-primary-400;
+        color: $color-white-400;
+        border: 1px solid $color-primary-400;
+      }
+    }
+  }
+}
+
+.Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  width: max-content;
+  min-width: 94px;
+  border: 1px solid $color-white-100;
+  outline: none;
+  background-color: $color-white-300;
+  color: $color-typo-200;
+  font-size: $font-text-md;
+  font-weight: 400;
+  border-radius: 100px;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: $main-transition;
+
+  @include md {
+    padding: 8px 10px;
+  }
+
+  &.fullWidth {
+    width: 100%;
+  }
+
+  &.fitContent {
+    min-width: 0;
+  }
+
+  &.cornered {
+    border-radius: 8px;
+    padding: 4px 8px;
+    gap: 10px;
+    font-weight: 500;
+    font-size: $font-text-lg;
+
+    @include sm {
+      font-size: $font-text-md;
+    }
+  }
+
+  &.primary {
+    background-color: $color-primary-400;
+    color: $color-white-400;
+    border: 1px solid $color-primary-400;
+
+    &:hover {
+      background-color: $color-primary-100;
+      color: $color-primary-400;
+      border: 1px solid $color-primary-400;
+    }
+  }
+
+  &.neutral {
+    background-color: $color-grey-300;
+    color: $color-white-400;
+    border: 1px solid $color-grey-300;
+
+    &:hover {
+      background-color: $color-grey-200;
+      color: $color-typo-400;
+      border: 1px solid $color-grey-300;
+    }
+  }
+
+  &.outline {
+    background-color: transparent;
+    color: $color-typo-300;
+    border: 1px solid $color-typo-200;
+
+    &:hover {
+      background-color: transparent;
+      color: $color-primary-400;
+      border: 1px solid $color-primary-400;
+    }
+  }
+
+  &.light {
+    background-color: $color-white-400;
+    color: $color-typo-300;
+    border: 1px solid $color-white-100;
+
+    &:hover {
+      background-color: $color-white-100;
+      color: $color-typo-300;
+      border: 1px solid $color-grey-400;
+    }
+  }
+
+  &.primary_outline {
+    background-color: transparent;
+    color: $color-primary-400;
+    border: 1px solid $color-primary-400;
+
+    &:hover {
+      background-color: transparent;
+      color: $color-typo-300;
+      border: 1px solid $color-typo-200;
+    }
+  }
+
+  &.disabled {
+    border: 1px solid $color-white-100;
+    color: $color-typo-400;
+    background-color: $color-white-200;
+
+    &:hover {
+      border: 1px solid $color-white-100;
+      color: $color-typo-400;
+      background-color: $color-white-200;
+      cursor: no-drop;
+    }
+  }
+
+  &:hover {
+    background-color: $color-primary-100;
+    color: $color-grey-500;
+
+    .btnIcon {
+      &.right {
+        transform: translateX(2px);
+        transition: $main-transition;
+      }
+    }
+  }
+
+  .btnIcon {
+    &.right {
+      font-size: $font-text-lg;
+      color: $color-typo-200;
+    }
+  }
+}
