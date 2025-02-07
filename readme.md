@@ -4,6 +4,18 @@
 
 The Birthday Genie app is designed to simplify birthday management and reminders. It allows users to manage the birthdays and details of their loved ones, schedule personalized messages, and receive timely reminders. Additionally, it provides gift suggestions with vendor links and calendar synchronization to streamline user experience.
 
+## FrontEnd Dev Guide
+
+[Make Read before doing anything](https://drive.google.com/file/d/100yRDjBkB0zniGTVbZx4B3EZAWKfiFtI/view?usp=sharing)
+
+## Trello Link
+
+[Link to Trello](https://trello.com/b/5B4jpmnk/birthday-app)
+
+## API Documentation
+
+[Link to API Doc](#)
+
 ## Figma File
 
 [Birthday App Design on Figma](https://www.figma.com/design/k3Bb59Eo60vbiQUmiopR2Q/Birthday-App?node-id=291-32254&p=f&t=ZhvsKGeS2MH0ooVm-0)
@@ -166,19 +178,5 @@ git branch -d <branch-name>
 - **Prettier/ESLint**: Automate code formatting.
 - **Git Hooks**: Use tools like Husky for pre-commit linting.
 - **GitHub Actions**: Automate CI/CD pipelines.
-
-### Monetisation
-
-- Tiered plans based on message and friend limits.
-- Affiliate links from vendors.
-- Vendor registration for product showcases.
-- Advertisements.
-
-### Social Media Strategy
-
-- Create Instagram and TikTok content for user suggestions and promotional posts.
-- Engage with users for feedback and feature requests.
-
----
 
 This README ensures clarity for all team members, enhances collaboration, and provides a structured workflow to develop and maintain the project efficiently.
