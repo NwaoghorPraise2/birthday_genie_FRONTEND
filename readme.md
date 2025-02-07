@@ -6,7 +6,7 @@ The Birthday Genie app is designed to simplify birthday management and reminders
 
 ## FrontEnd Dev Guide
 
-[Make Read before doing anything](https://drive.google.com/file/d/100yRDjBkB0zniGTVbZx4B3EZAWKfiFtI/view?usp=sharing)
+[Make Sure to Read before doing anything](https://drive.google.com/file/d/100yRDjBkB0zniGTVbZx4B3EZAWKfiFtI/view?usp=sharing)
 
 ## Trello Link
 
