@@ -1,0 +1,47 @@
+@use "../../../styles/utils.scss" as *;
+
+.input_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  .input_label {
+    font-size: $font-text-sm;
+    font-weight: 500;
+  }
+
+  .input_field {
+    width: 100%;
+    padding: 18px;
+    border: 1px solid #e4e4e7;
+    border-radius: 100px;
+    font-size: $font-text-md;
+    font-weight: 400;
+    outline: none;
+    transition: border-color 0.3s;
+    
+    &.textarea {
+      border-radius: 24px;
+      background-color: $color-white-300;
+      border: 1px solid #EEEEEE;
+      caret-color: $color-primary-400;
+      line-height: 24px;
+    }
+
+    &.input_error {
+      border-color: $color-primary-400;
+    }
+
+    &:focus {
+      border-color: $color-grey-500;
+      box-shadow: 0 0 5px #53535323;
+    }
+  }
+
+  .error_text {
+    font-size: $font-text-md;
+    font-weight: 400;
+    color: $color-primary-400;
+  }
+}

@@ -1,0 +1,72 @@
+@use "../../../styles/utils.scss" as *;
+
+.HeroSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+
+  @include sm {
+    padding: 48px 25px;
+  }
+
+  @include xsm {
+    padding: 48px 15px;
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .hero_text {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      h2 {
+        color: $color-typo-400;
+        font-weight: 400;
+        font-size: $font-display-md;
+        line-height: 44px;
+        text-align: center;
+        text-transform: capitalize;
+        
+        @include sm{
+            font-size: $font-display-sm;
+            line-height: 38px;
+        }
+      }
+
+      h1 {
+        color: $color-typo-400;
+        font-weight: 500;
+        font-size: $font-display-xl;
+        line-height: 72px;
+        text-align: center;
+        text-transform: capitalize;
+        
+        @include sm{
+            font-size: $font-display-lg;
+            line-height: 60px;
+        }
+
+        span {
+          color: $color-primary-400;
+        }
+      }
+
+      p {
+        color: $color-typo-200;
+        font-weight: 400;
+        font-size: $font-text-lg;
+        line-height: 28px;
+        text-align: center;
+      }
+    }
+  }
+}

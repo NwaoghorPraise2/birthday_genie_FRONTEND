@@ -1,0 +1,19 @@
+@use "../../../styles/utils.scss" as *;
+
+.Newsletter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding: 0 24px;
+
+  .newsletter_form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    max-width: 800px;
+  }
+}
