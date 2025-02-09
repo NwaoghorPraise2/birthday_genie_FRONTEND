@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import Newsletter from "../newsletter/newsletter";
-import "./footer.scss";
+import { Link } from 'react-router-dom';
+import Newsletter from '../newsletter/newsletter';
+import './footer.scss';
 
 const Footer = () => {
   return (
@@ -97,7 +97,7 @@ const Footer = () => {
             </div>
           </div>
           <p className="footer_contents_copyright">
-            &copy; 2024 Birthday Genie. All rights reserved
+            &copy; 2025 Birthday Genie. All rights reserved
           </p>
         </div>
       </div>
