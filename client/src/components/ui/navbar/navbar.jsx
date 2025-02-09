@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./navbar.scss";
-import { Link } from "react-router-dom";
-import Button from "../button/button";
+import Button from "../../reusable/button/button";
 
 const links = {
   main: [
@@ -19,6 +19,11 @@ const loggedIn = false;
 
 const Navbar = () => {
   const [menuHide, setMenuHide] = useState(true);
+  const location = useLocation();
+
+  useEffect(() => {
+    setMenuHide(true);
+  }, [location.pathname]);
 
   return (
     <div className="Navbar">
