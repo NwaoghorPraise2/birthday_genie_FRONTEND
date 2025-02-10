@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import Newsletter from '../newsletter/newsletter';
-import './footer.scss';
+import { Link } from "react-router-dom";
+import Newsletter from "../newsletter/newsletter";
+import "./footer.scss";
 
 const Footer = () => {
   return (
