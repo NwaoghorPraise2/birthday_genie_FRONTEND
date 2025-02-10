@@ -31,6 +31,7 @@ const HeroSection = () => {
           <Button primary text="Get Started" toUrl="/signup" />
         </div>
         <HeroShowcase mainImg="/imgs/Hero Image.png" miniImgs={images} />
+        <hr />
       </div>
     </div>
   );

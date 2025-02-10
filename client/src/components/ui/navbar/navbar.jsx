@@ -28,12 +28,14 @@ const Navbar = () => {
   return (
     <div className="Navbar">
       <div className="container">
-        <Link className="logo_link" to="/">
-          <div className="logo">
-            <img src="/imgs/logo.png" alt="logo" />
-            <span className="title">Birthday</span>
-          </div>
-        </Link>
+        <div className="logo_box">
+          <Link className="logo_link" to="/">
+            <div className="logo">
+              <img src="/imgs/logo.png" alt="logo" />
+              <span className="title">Birthday</span>
+            </div>
+          </Link>
+        </div>
         <div className={menuHide ? "links" : "links open"}>
           <div className="pages">
             {links.main.map((link, index) => (

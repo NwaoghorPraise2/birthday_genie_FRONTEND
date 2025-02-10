@@ -1,0 +1,67 @@
+@use "../../../../styles/utils.scss" as *;
+
+.sectionFour {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 0;
+  gap: 32px;
+
+  @include md {
+    padding: 0 0 32px;
+    flex-direction: column;
+  }
+
+  .text_box {
+    width: calc(60% - 16px);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include md {
+      width: 100%;
+    }
+
+    @include sm {
+      padding: 0;
+    }
+
+    p {
+      color: $color-typo-300;
+      font-size: $font-text-lg;
+      font-weight: 400;
+      line-height: 28px;
+
+      @include md {
+        font-size: $font-text-md;
+      }
+    }
+  }
+
+  .image_box {
+    width: calc(40% - 16px);
+    display: flex;
+    padding-right: 32px;
+    gap: 12px;
+    align-items: center;
+
+    @include md {
+      width: 100%;
+      padding-right: 0;
+      max-width: 612px;
+    }
+
+    .duo {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

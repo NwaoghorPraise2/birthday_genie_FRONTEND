@@ -1,4 +1,5 @@
 import PageBanner from "../../../components/reusable/pageBanner/pageBanner";
+import AboutPageSections from "../../../components/ui/aboutPageSections/aboutPageSections";
 import "./about.scss";
 
 const images = [
@@ -21,6 +22,7 @@ const About = () => {
         mainImg="/imgs/Hero Image About.png"
         miniImgs={images}
       />
+      <AboutPageSections />
     </div>
   );
 };

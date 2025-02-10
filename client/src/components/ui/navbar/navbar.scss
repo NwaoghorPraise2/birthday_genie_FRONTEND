@@ -35,37 +35,43 @@
       justify-content: space-between;
     }
 
-    a.logo_link {
+    .logo_box{
       width: calc(33.33% - 4px);
-
+      
       @include lg{
         width: max-content;
       }
 
-      .logo {
+      a.logo_link {
+        display: inline-block;
         width: max-content;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 100px;
-        border: 1px solid $color-white-100;
-        padding: 10px 16px;
-        background-color: $color-white-400;
-        gap: 10px;
-
-        img {
-          width: 28px;
-          height: 28px;
-          object-fit: contain;
-        }
-
-        span.title {
-          color: $color-primary-400;
-          font-weight: 500;
-          font-size: $font-display-xs;
+  
+        .logo {
+          width: max-content;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 100px;
+          border: 1px solid $color-white-100;
+          padding: 10px 16px;
+          background-color: $color-white-400;
+          gap: 10px;
+  
+          img {
+            width: 28px;
+            height: 28px;
+            object-fit: contain;
+          }
+  
+          span.title {
+            color: $color-primary-400;
+            font-weight: 500;
+            font-size: $font-display-xs;
+          }
         }
       }
     }
+
 
     .links {
       width: calc(66.67% - 4px);

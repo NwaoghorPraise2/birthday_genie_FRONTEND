@@ -1,0 +1,78 @@
+@use "../../../../styles/utils.scss" as *;
+
+.SectionSeven {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @include sm {
+    padding: 32px 0;
+  }
+
+  hr {
+    width: 100%;
+    border: 1px solid #dde7ee;
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    padding: 32px 0;
+
+    @include sm{
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .card {
+      flex: 1;
+      border: 1px solid #dde7ee;
+      background-color: #fff7fa;
+      padding: 32px 0;
+      border-radius: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      @include sm{
+        width: 100%;
+      }
+
+      p {
+        color: $color-typo-400;
+        font-size: $font-text-md;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: center;
+      }
+
+      h2 {
+        color: $color-typo-400;
+        font-size: 132px;
+        font-weight: 700;
+        line-height: 156px;
+        text-align: center;
+
+        @include md{
+          font-size: 80px;
+          line-height: 88px;
+        }
+
+        @include xsm{
+          font-size: 60px;
+          line-height: 68px;
+        }
+
+        span {
+          font-size: 30px;
+          line-height: 38px;
+        }
+      }
+    }
+  }
+}

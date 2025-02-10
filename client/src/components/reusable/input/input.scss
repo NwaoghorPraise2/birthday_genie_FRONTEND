@@ -20,12 +20,12 @@
     font-weight: 400;
     outline: none;
     transition: border-color 0.3s;
+    caret-color: $color-primary-400;
     
     &.textarea {
       border-radius: 24px;
       background-color: $color-white-300;
       border: 1px solid #EEEEEE;
-      caret-color: $color-primary-400;
       line-height: 24px;
     }
 
