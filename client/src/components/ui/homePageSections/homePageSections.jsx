@@ -6,6 +6,7 @@ import SectionSeven from "./sectionSeven/sectionSeven";
 import SectionSix from "./sectionSix/sectionSix";
 import SectionThree from "./sectionThree/sectionThree";
 import SectionTwo from "./sectionTwo/sectionTwo";
+import Faq from "../faq/faq"
 
 const HomePageSections = () => {
   return <div className="HomePageSections">
@@ -16,7 +17,7 @@ const HomePageSections = () => {
     <SectionSix />
     <SectionSeven />
     <SectionEight />
-    FAQs Go Here!
+    <Faq />
   </div>;
 };
 
