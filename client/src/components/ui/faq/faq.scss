@@ -1,0 +1,31 @@
+@use "../../../styles/utils.scss" as *;
+
+.Faq {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    // gap: 32px;
+  
+    @include sm {
+      padding: 32px 0;
+    }
+
+  hr {
+    width: 100%;
+    border: 1px solid #dde7ee;
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 80px;
+    gap: 80px;
+
+    @include sm{
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+}
+
+}
