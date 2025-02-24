@@ -1,0 +1,58 @@
+@use "../../../styles/utils.scss" as *;
+
+.banner-container {
+  width: 100%;
+  position: absolute;
+  // left: 40px;
+  // right: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 600ms;
+
+  &.active {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  &.hidden {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+.notif-banner {
+  width: 100%;
+  max-width: 1400px;
+
+  height: 36px;
+  border-radius: 24px;
+
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  display: flex;
+
+  &.default {
+    background-color: #fffcf5;
+    border: 1px solid #fedf89;
+    color: #dc6803;
+  }
+
+  &.success {
+    background-color: #edfcf2;
+    border: 1px solid #aaf0c4;
+    color: #3ccb7f;
+  }
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+  height: 100%;
+  width: 16px;
+  position: absolute;
+  right: 18px;
+}
