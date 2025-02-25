@@ -12,6 +12,11 @@ import Contact from "./pages/landing/contact/contact";
 import Signup from "./pages/auth/signup/signup";
 import Login from "./pages/auth/login/login";
 
+// dashboard
+// import DashBoard from "./pages/dashboard/home/home";
+// import Friends from "./pages/dashboard/friends/friends";
+// import TopNav from "./components/ui/topBar/nav";
+
 const MainLayout = () => {
   return (
     <div className="App">
@@ -34,6 +39,18 @@ const AuthLayout = () => {
   );
 };
 
+
+// const DashboardLayout = () => {
+//   return (
+//     <div className="App">
+//       <ScrollToTop>
+//         <TopNav />
+//         <Outlet />
+//       </ScrollToTop>
+//     </div>
+//   );
+// };
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -54,6 +71,7 @@ const router = createBrowserRouter([
       },
     ],
   },
+
   {
     path: "/auth",
     element: <AuthLayout />,
@@ -69,6 +87,22 @@ const router = createBrowserRouter([
       },
     ],
   },
+
+  // {
+  //   path: "/dashboard",
+  //   element: <DashboardLayout />,
+  //   children: [
+  //     {
+  //       path: "",
+  //       element: <DashBoard />,
+  //     },
+  //     {
+  //       path: "friends",
+  //       element: <Friends />,
+  //     },
+  //   ],
+  // },
+
 ]);
 
 function App() {
