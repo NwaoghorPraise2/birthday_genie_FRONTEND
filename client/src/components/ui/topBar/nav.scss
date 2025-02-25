@@ -76,7 +76,7 @@
 
 .search input {
   width: 100%;
-  font-size: $font-text-md;
+  font-size: $font-text-sm;
   font-weight: 400;
   outline: none;
   background-color: transparent;
@@ -88,7 +88,7 @@
   }
 
   &::placeholder {
-    color: $color-typo-100;
+    color: $color-typo-200;
   }
 }
 

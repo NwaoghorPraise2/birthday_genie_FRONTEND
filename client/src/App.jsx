@@ -5,17 +5,20 @@ import ScrollToTop from "./components/ui/scrollToTop/scrollToTop";
 import Navbar from "./components/ui/navbar/navbar";
 import Footer from "./components/ui/footer/footer";
 
+// Landing
 import Error from "./pages/error/error";
 import Home from "./pages/landing/home/home";
 import About from "./pages/landing/about/about";
 import Contact from "./pages/landing/contact/contact";
+
+// Auth
 import Signup from "./pages/auth/signup/signup";
 import Login from "./pages/auth/login/login";
 
-// dashboard
-// import DashBoard from "./pages/dashboard/home/home";
-// import Friends from "./pages/dashboard/friends/friends";
-// import TopNav from "./components/ui/topBar/nav";
+// Dashboard
+import DashBoard from "./pages/dashboard/home/home";
+import Friends from "./pages/dashboard/friends/friends";
+import TopNav from "./components/ui/topBar/nav";
 
 const MainLayout = () => {
   return (
@@ -39,17 +42,16 @@ const AuthLayout = () => {
   );
 };
 
-
-// const DashboardLayout = () => {
-//   return (
-//     <div className="App">
-//       <ScrollToTop>
-//         <TopNav />
-//         <Outlet />
-//       </ScrollToTop>
-//     </div>
-//   );
-// };
+const DashboardLayout = () => {
+  return (
+    <div className="Dashboard">
+      <ScrollToTop>
+        <TopNav />
+        <Outlet />
+      </ScrollToTop>
+    </div>
+  );
+};
 
 const router = createBrowserRouter([
   {
@@ -88,20 +90,20 @@ const router = createBrowserRouter([
     ],
   },
 
-  // {
-  //   path: "/dashboard",
-  //   element: <DashboardLayout />,
-  //   children: [
-  //     {
-  //       path: "",
-  //       element: <DashBoard />,
-  //     },
-  //     {
-  //       path: "friends",
-  //       element: <Friends />,
-  //     },
-  //   ],
-  // },
+  {
+    path: "/dashboard",
+    element: <DashboardLayout />,
+    children: [
+      {
+        path: "",
+        element: <DashBoard />,
+      },
+      {
+        path: "friends",
+        element: <Friends />,
+      },
+    ],
+  },
 
 ]);
 
