@@ -10,6 +10,11 @@ import Home from "./pages/landing/home/home";
 import About from "./pages/landing/about/about";
 import Contact from "./pages/landing/contact/contact";
 
+// dashboard
+// import DashBoard from "./pages/dashboard/home/home";
+// import Friends from "./pages/dashboard/friends/friends";
+// import TopNav from "./components/ui/topBar/nav";
+
 const MainLayout = () => {
   return (
     <div className="App">
@@ -21,6 +26,17 @@ const MainLayout = () => {
     </div>
   );
 };
+
+// const DashboardLayout = () => {
+//   return (
+//     <div className="App">
+//       <ScrollToTop>
+//         <TopNav />
+//         <Outlet />
+//       </ScrollToTop>
+//     </div>
+//   );
+// };
 const router = createBrowserRouter([
   {
     path: "/",
@@ -41,6 +57,21 @@ const router = createBrowserRouter([
       },
     ],
   },
+
+  // {
+  //   path: "/dashboard",
+  //   element: <DashboardLayout />,
+  //   children: [
+  //     {
+  //       path: "/dashboard",
+  //       element: <DashBoard />,
+  //     },
+  //     {
+  //       path: "/dashboard/friends",
+  //       element: <Friends />,
+  //     },
+  //   ],
+  // },
 ]);
 
 function App() {
