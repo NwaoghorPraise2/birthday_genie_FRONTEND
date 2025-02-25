@@ -15,7 +15,7 @@ const Input = ({ label, error, textbox, ...props }) => {
           className={`input_field ${error ? "input_error" : ""}`}
         />
       )}
-      {error && <p className="error_text">{error}</p>}
+      {error && <p id="error_text">{error}</p>}
     </div>
   );
 };

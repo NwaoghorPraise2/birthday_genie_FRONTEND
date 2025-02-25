@@ -19,7 +19,7 @@ const SectionSeven = () => {
         <div className="card">
           <p>Number of Happy Users</p>
           <h2>65k</h2>
-          <Button primary toUrl="signup" text="Join us today" />
+          <Button primary toUrl="auth/signup" text="Join us today" />
         </div>
       </div>
       <hr />

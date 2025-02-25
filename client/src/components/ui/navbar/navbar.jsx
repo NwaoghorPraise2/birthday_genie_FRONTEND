@@ -10,8 +10,8 @@ const links = {
     { name: "contact", url: "/contact" },
   ],
   utils: [
-    { name: "login", url: "/login" },
-    { name: "sign up", url: "/signup" },
+    { name: "login", url: "/auth/login" },
+    { name: "sign up", url: "/auth/signup" },
   ],
 };
 
