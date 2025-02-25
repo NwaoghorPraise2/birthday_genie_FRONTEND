@@ -9,6 +9,8 @@ import Error from "./pages/error/error";
 import Home from "./pages/landing/home/home";
 import About from "./pages/landing/about/about";
 import Contact from "./pages/landing/contact/contact";
+import Signup from "./pages/auth/signup/signup";
+import Login from "./pages/auth/login/login";
 
 // dashboard
 // import DashBoard from "./pages/dashboard/home/home";
@@ -27,6 +29,17 @@ const MainLayout = () => {
   );
 };
 
+const AuthLayout = () => {
+  return (
+    <div className="Auth">
+      <ScrollToTop>
+        <Outlet />
+      </ScrollToTop>
+    </div>
+  );
+};
+
+
 // const DashboardLayout = () => {
 //   return (
 //     <div className="App">
@@ -37,6 +50,7 @@ const MainLayout = () => {
 //     </div>
 //   );
 // };
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -44,16 +58,32 @@ const router = createBrowserRouter([
     errorElement: <Error />,
     children: [
       {
-        path: "/",
+        path: "",
         element: <Home />,
       },
       {
-        path: "/about",
+        path: "about",
         element: <About />,
       },
       {
-        path: "/contact",
+        path: "contact",
         element: <Contact />,
+      },
+    ],
+  },
+
+  {
+    path: "/auth",
+    element: <AuthLayout />,
+    errorElement: <Error />,
+    children: [
+      {
+        path: "signup",
+        element: <Signup />,
+      },
+      {
+        path: "login",
+        element: <Login />,
       },
     ],
   },
@@ -63,15 +93,16 @@ const router = createBrowserRouter([
   //   element: <DashboardLayout />,
   //   children: [
   //     {
-  //       path: "/dashboard",
+  //       path: "",
   //       element: <DashBoard />,
   //     },
   //     {
-  //       path: "/dashboard/friends",
+  //       path: "friends",
   //       element: <Friends />,
   //     },
   //   ],
   // },
+
 ]);
 
 function App() {

@@ -39,9 +39,10 @@
     }
   }
 
-  .error_text {
-    font-size: $font-text-md;
+  #error_text {
+    font-size: $font-text-xs;
     font-weight: 400;
     color: $color-primary-400;
+    text-align: left;
   }
 }

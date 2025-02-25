@@ -28,7 +28,7 @@ const HeroSection = () => {
             Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
             consectetur.
           </p>
-          <Button primary text="Get Started" toUrl="/signup" />
+          <Button primary text="Get Started" toUrl="/auth/signup" />
         </div>
         <HeroShowcase mainImg="/imgs/Hero Image.png" miniImgs={images} />
         <hr />

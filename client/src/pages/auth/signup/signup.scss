@@ -1,0 +1,187 @@
+@use "../../../styles/utils.scss" as *;
+
+.Signup {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+
+  .form_box {
+    width: 50%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: $color-white-400;
+    padding: 24px;
+
+    &::-webkit-scrollbar-track {
+      background: $color-white-100;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-grey-300;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: $color-grey-400;
+    }
+
+    @include md {
+      width: 100%;
+      background: linear-gradient(
+          to top,
+          #f1f1f195 0%,
+          #f1f1f195 50%
+        ),
+        url("/imgs/633ae406c2d3a3663750549da637847c.png");
+      background-blend-mode: luminosity;
+      background-size: cover;
+      padding: 48px;
+    }
+
+    @include sm {
+      padding: 24px;
+    }
+
+    form {
+      width: 100%;
+      border-radius: 24px;
+      border: 1px solid $color-white-100;
+      padding: 32px 110px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 16px;
+      background-color: #ffffffe4;
+
+      @include lg {
+        padding: 32px;
+      }
+
+      .logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        img {
+          width: 28px;
+          height: 28px;
+          object-fit: contain;
+        }
+
+        span {
+          color: $color-primary-400;
+          font-weight: 400;
+          font-size: $font-display-xs;
+        }
+      }
+
+      p {
+        color: $color-typo-300;
+        width: 100%;
+        font-weight: 400;
+        font-size: $font-text-md;
+        line-height: 24px;
+        text-align: center;
+      }
+
+      .form_fields {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .btn_group {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+
+          .divider {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            color: $color-typo-300;
+            font-weight: 400;
+            font-size: $font-text-sm;
+            line-height: 22px;
+            text-align: center;
+
+            span {
+              width: 110px;
+              border: 1px solid #e1e5ea;
+            }
+          }
+        }
+      }
+
+      .login_option {
+        font-weight: 500;
+        font-size: $font-text-sm;
+        line-height: 20px;
+        text-align: center;
+
+        a {
+          color: $color-primary-400;
+        }
+      }
+    }
+  }
+
+  .img_box {
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(
+        to top,
+        rgba(255, 255, 255, 0.546) 0%,
+        rgba(255, 255, 255, 0.546) 50%
+      ),
+      url("/imgs/633ae406c2d3a3663750549da637847c.png");
+    background-blend-mode: overlay;
+    padding: 32px 24px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    .img_solo {
+      width: calc(50% - 16px);
+      height: 368px;
+      overflow: hidden;
+      border-radius: 24px;
+      border: 1px solid #dde7ee;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .img_group {
+      width: calc(50% - 16px);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+
+      .img {
+        width: 100%;
+        height: calc(33.33% - 10.67px);
+        overflow: hidden;
+        object-fit: cover;
+        border-radius: 24px;
+        border: 1px solid #dde7ee;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
