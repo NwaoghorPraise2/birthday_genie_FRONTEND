@@ -36,15 +36,15 @@
   display: flex;
 
   &.default {
-    background-color: #fffcf5;
-    border: 1px solid #fedf89;
-    color: #dc6803;
+    background-color: $color-warning-100;
+    border: 1px solid $color-warning-200;
+    color: $color-warning-400;
   }
 
   &.success {
-    background-color: #edfcf2;
-    border: 1px solid #aaf0c4;
-    color: #3ccb7f;
+    background-color: $color-success-100;
+    border: 1px solid $color-success-200;
+    color: $color-success-400;
   }
 }
 
