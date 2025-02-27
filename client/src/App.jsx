@@ -19,6 +19,8 @@ import Login from "./pages/auth/login/login";
 import DashBoard from "./pages/dashboard/home/home";
 import Friends from "./pages/dashboard/friends/friends";
 import TopNav from "./components/ui/topBar/nav";
+import SideBar from "./components/ui/sideBar/sideBar";
+import { DashboardContext } from "./contexts/dashboardContext";
 
 const MainLayout = () => {
   return (
@@ -44,12 +46,17 @@ const AuthLayout = () => {
 
 const DashboardLayout = () => {
   return (
-    <div className="Dashboard">
-      <ScrollToTop>
-        <TopNav />
-        <Outlet />
-      </ScrollToTop>
-    </div>
+    <DashboardContext>
+      <div className="Dashboard">
+        <ScrollToTop>
+          <TopNav />
+          <main className="main">
+            <SideBar />
+            <Outlet />
+          </main>
+        </ScrollToTop>
+      </div>
+    </DashboardContext>
   );
 };
 
@@ -104,7 +111,6 @@ const router = createBrowserRouter([
       },
     ],
   },
-
 ]);
 
 function App() {
