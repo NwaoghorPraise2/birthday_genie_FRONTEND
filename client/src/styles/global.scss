@@ -91,7 +91,20 @@ textarea {
   color: $color-white-400;
 }
 
-.App,.Auth,.Dashboard {
+.App,
+.Auth,
+.Dashboard {
   max-width: 1400px;
   margin: 0 auto;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 212px 1fr;
+  position: relative;
+  margin-top: 24px;
+
+  @include md {
+    grid-template-columns: 1fr;
+  }
 }

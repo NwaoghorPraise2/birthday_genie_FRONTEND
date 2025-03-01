@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./nav.scss";
 
 import { Link } from "react-router-dom";
+import { useDashboardContext } from "../../../contexts/dashboardContext";
 
 function TopNav() {
   const [value, setValue] = useState("");
@@ -71,6 +72,8 @@ function Icons() {
   const [open, setOpen] = useState({ nav: false, input: false });
   const [value, setValue] = useState("");
 
+  const { openNav, togglenNav } = useDashboardContext();
+
   const handleSetValue = (value) => {
     setValue(value);
   };
@@ -109,15 +112,8 @@ function Icons() {
           <img src="/imgs/searchIcon.png" alt="logo" />
         </button>
         <img src="/imgs/profile-img.png" alt="User icon" />
-        <button
-          onClick={() => {
-            setOpen((op) => ({
-              ...op,
-              nav: !op.nav,
-            }));
-          }}
-        >
-          <img src={`${open.nav ? "/imgs/x-mark.png" : "/imgs/menu.png"}`} />
+        <button onClick={togglenNav}>
+          <img src={`${openNav ? "/imgs/x-mark.png" : "/imgs/menu.png"}`} />
         </button>
       </span>
     </div>
