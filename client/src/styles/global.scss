@@ -98,11 +98,28 @@ textarea {
   margin: 0 auto;
 }
 
+.Dashboard {
+  padding: 8px 24px;
+}
+
 .main {
   display: grid;
   grid-template-columns: 212px 1fr;
   position: relative;
   margin-top: 24px;
+
+  .main-page {
+    // width: 100%;
+    padding: 24px;
+    position: absolute;
+    inset: 0;
+    left: 200px;
+
+    @include md {
+      position: relative;
+      left: 0;
+    }
+  }
 
   @include md {
     grid-template-columns: 1fr;
