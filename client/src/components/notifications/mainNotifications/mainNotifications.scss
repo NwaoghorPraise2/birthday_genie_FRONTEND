@@ -69,12 +69,10 @@
           background-color: $color-error-400;
           color: $color-error-100;
         }
-
-        .date {
-          display: none;
-        }
       }
-
+      .date {
+        display: none;
+      }
       h1 {
         font-size: $font-text-md;
         font-weight: 600;
