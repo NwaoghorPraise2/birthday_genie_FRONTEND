@@ -52,7 +52,9 @@ const DashboardLayout = () => {
           <TopNav />
           <main className="main">
             <SideBar />
-            <Outlet />
+            <div className="main-page">
+              <Outlet />
+            </div>
           </main>
         </ScrollToTop>
       </div>
