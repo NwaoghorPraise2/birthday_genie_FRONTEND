@@ -1,0 +1,145 @@
+@use "../../../styles/utils.scss" as *;
+
+.mainNotification {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  .notifItem {
+    display: grid;
+    grid-template-columns: 40px 1fr 200px;
+    border-radius: 12px;
+    padding: 0;
+    width: 100%;
+    border: 1px solid $color-grey-200;
+    min-height: 80px;
+
+    .cancel {
+      width: 100%;
+      background-color: $color-grey-200;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-top-left-radius: 12px;
+      border-bottom-left-radius: 12px;
+
+      button {
+        background-color: $color-white-400;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $color-grey-300;
+        cursor: pointer;
+
+        img {
+          height: 60%;
+          width: 60%;
+        }
+        button:active {
+          outline: none;
+        }
+      }
+    }
+
+    .main-not {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      padding: 12px;
+
+      .button {
+        padding: 4px 6px;
+        font-size: $font-text-xs;
+        border-radius: 6px;
+
+        &.success {
+          background-color: $color-success-400;
+          color: $color-success-100;
+        }
+
+        &.warning {
+          background-color: $color-warning-300;
+          color: $color-warning-100;
+        }
+
+        &.missed {
+          background-color: $color-error-400;
+          color: $color-error-100;
+        }
+
+        .date {
+          display: none;
+        }
+      }
+
+      h1 {
+        font-size: $font-text-md;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: $font-text-xs;
+      }
+    }
+
+    .date-not {
+      padding: 12px;
+      display: flex;
+      gap: 6px;
+      font-size: $font-text-xs;
+      color: $color-grey-300;
+
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  @include md {
+    .notifItem {
+      grid-template-columns: 60px 1fr;
+      .date-not {
+        display: none;
+      }
+
+      .date {
+        display: block;
+      }
+    }
+  }
+}
+
+.bottom-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 12px;
+  bottom: 0;
+  background-color: $color-white-100;
+  width: 100%;
+  border-radius: 16px;
+
+  .bottom-btn {
+    padding: 8px 100px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: $main-transition;
+    background-color: $color-grey-300;
+    color: $color-white-100;
+    &:hover {
+      background-color: $color-grey-400;
+    }
+  }
+
+  @include sm {
+    // justify-content: center;
+
+    .bottom-btn {
+      padding: 8px 24px;
+    }
+  }
+}
