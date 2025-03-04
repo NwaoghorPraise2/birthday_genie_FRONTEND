@@ -20,7 +20,7 @@ const NotificationItem = ({ item }) => {
       </div>
       <div className="main-not">
         <div>
-          <button className={`button ${item.type}`}>{item.about}</button>
+          <span className={`button ${item.type}`}>{item.about}</span>
         </div>
         <h1>{item.title}</h1>
         <p>{item.content}</p>
