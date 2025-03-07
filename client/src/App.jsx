@@ -21,6 +21,7 @@ import Friends from "./pages/dashboard/friends/friends";
 import TopNav from "./components/ui/topBar/nav";
 import SideBar from "./components/ui/sideBar/sideBar";
 import { DashboardContext } from "./contexts/dashboardContext";
+import Notifications from "./pages/dashboard/notifications/notifications";
 
 const MainLayout = () => {
   return (
@@ -110,6 +111,10 @@ const router = createBrowserRouter([
       {
         path: "friends",
         element: <Friends />,
+      },
+      {
+        path: "notifications",
+        element: <Notifications />,
       },
     ],
   },

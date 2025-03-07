@@ -100,6 +100,10 @@ textarea {
 
 .Dashboard {
   padding: 8px 24px;
+
+  @include md {
+    padding: 8px;
+  }
 }
 
 .main {
@@ -118,6 +122,7 @@ textarea {
     @include md {
       position: relative;
       left: 0;
+      padding: 0;
     }
   }
 

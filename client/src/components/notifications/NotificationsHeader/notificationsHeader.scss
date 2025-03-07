@@ -1,0 +1,23 @@
+@use "../../../styles/utils.scss" as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  width: 100%;
+  border-radius: 100px;
+  border: 1px solid $color-grey-200;
+  background-color: $color-white-100;
+
+  h1 {
+    font-size: $font-display-xs;
+  }
+
+  .red-btn {
+    padding: 4px 6px;
+    background-color: $color-error-400;
+    color: $color-error-100;
+    border-radius: 6px;
+  }
+}
