@@ -24,7 +24,7 @@ export const formatDateTime = (date) => {
 export const routes = [
   {
     name: "Home",
-    route: "/dashboard/",
+    route: "/dashboard",
     Icon: RiHomeLine,
   },
   {

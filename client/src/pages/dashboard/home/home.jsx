@@ -1,4 +1,4 @@
-import NotificationBanner from "../../../components/reusable/notification-banner/banner";
+import NotificationBanner from "../../../components/reusable/notificationBanner/notificationBanner";
 import ProgressBar from "../../../components/ui/progressBar/progressBar";
 
 function DashBoard() {

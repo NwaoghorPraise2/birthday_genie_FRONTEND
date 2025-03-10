@@ -2,23 +2,23 @@
 
 .banner-container {
   width: 100%;
-  position: absolute;
-  // left: 40px;
-  // right: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  transition: all 600ms;
+  max-height: 80px;
+  transition: opacity .3s ease-in, transform .3s ease-in, max-height .6s ease-in;
 
   &.active {
     opacity: 1;
     transform: scale(1);
+    max-height: 80px;
   }
 
   &.hidden {
     opacity: 0;
     transform: scale(0);
+    max-height: 0;
   }
 }
 

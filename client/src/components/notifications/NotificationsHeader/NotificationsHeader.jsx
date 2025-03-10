@@ -1,10 +1,11 @@
 import "./notificationsHeader.scss";
+import Button from "../../reusable/button/button";
 
 const NotificationsHeader = () => {
   return (
-    <header className="header">
+    <header className="NotificationsHeader">
       <h1>Notifications</h1>
-      <button className="red-btn">Mark All as Read</button>
+      <Button text="Mark all as read" cornered primary fitContent />
     </header>
   );
 };

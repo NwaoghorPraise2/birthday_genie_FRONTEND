@@ -1,22 +1,22 @@
 @use "../../../styles/utils.scss" as *;
 
 .mainNotification {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 12px;
 
   .notifItem {
-    display: grid;
-    grid-template-columns: 40px 1fr 200px;
+    width: 100%;
+    display: flex;
     border-radius: 12px;
     padding: 0;
-    width: 100%;
-    border: 1px solid $color-grey-200;
+    border: 1px solid $color-white-100;
     min-height: 80px;
 
     .cancel {
-      width: 100%;
-      background-color: $color-grey-200;
+      width: 64px;
+      background-color: $color-white-200;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -44,100 +44,121 @@
       }
     }
 
-    .main-not {
+    .content {
+      width: calc(100% - 64px);
       display: flex;
       flex-direction: column;
-      gap: 2px;
-      padding: 12px;
+      gap: 8px;
+      padding: 8px 12px;
 
-      .button {
-        padding: 4px 6px;
-        font-size: $font-text-xs;
-        border-radius: 6px;
+      .meta {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
 
-        &.success {
-          background-color: $color-success-400;
-          color: $color-success-100;
+        .button {
+          padding: 2px 8px;
+          font-size: $font-text-sm;
+          border-radius: 8px;
+
+          &.success {
+            background-color: $color-success-400;
+            color: $color-success-100;
+          }
+
+          &.warning {
+            background-color: $color-warning-300;
+            color: $color-warning-100;
+          }
+
+          &.missed {
+            background-color: $color-error-400;
+            color: $color-error-100;
+          }
         }
 
-        &.warning {
-          background-color: $color-warning-300;
-          color: $color-warning-100;
+        .date-not {
+          padding: 12px;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          font-size: $font-text-sm;
+          color: $color-typo-200;
+          font-weight: 400;
+          line-height: 28px;
+
+          @include sm{
+            display: none;
+          }
+
+          img {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+
+      .info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        @include xsm{
+          gap: 10px;
         }
 
-        &.missed {
-          background-color: $color-error-400;
-          color: $color-error-100;
+        .message-title {
+          width: 100%;
+          color: $color-typo-300;
+          font-weight: 700;
+          font-size: $font-text-lg;
+          line-height: 28px;
+          letter-spacing: 0%;
         }
-      }
-      .date {
-        display: none;
-      }
-      h1 {
-        font-size: $font-text-md;
-        font-weight: 600;
-      }
+        
+        .message-content {
+          width: 100%;
+          color: $color-typo-300;
+          font-weight: 400;
+          font-size: $font-text-lg;
+          line-height: 28px;
+          letter-spacing: 0%;
+        }
 
-      p {
-        font-size: $font-text-xs;
-      }
-    }
+        .date-not {
+          align-items: center;
+          gap: 6px;
+          font-size: $font-text-sm;
+          color: $color-typo-200;
+          font-weight: 400;
+          line-height: 28px;
+          display: none;
 
-    .date-not {
-      padding: 12px;
-      display: flex;
-      gap: 6px;
-      font-size: $font-text-xs;
-      color: $color-grey-300;
+          @include sm{
+            display: flex;
+          }
 
-      img {
-        width: 16px;
-        height: 16px;
+          img {
+            width: 16px;
+            height: 16px;
+          }
+        }
       }
     }
   }
 
-  @include md {
-    .notifItem {
-      grid-template-columns: 60px 1fr;
-      .date-not {
-        display: none;
-      }
+  .bottom{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px;
+    border-radius: 24px;
+    background-color: $color-white-200;
 
-      .date {
-        display: block;
-      }
-    }
-  }
-}
-
-.bottom-container {
-  display: flex;
-  justify-content: flex-end;
-  gap: 12px;
-  padding: 12px;
-  bottom: 0;
-  background-color: $color-white-100;
-  width: 100%;
-  border-radius: 16px;
-
-  .bottom-btn {
-    padding: 8px 100px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: $main-transition;
-    background-color: $color-grey-300;
-    color: $color-white-100;
-    &:hover {
-      background-color: $color-grey-400;
-    }
-  }
-
-  @include sm {
-    // justify-content: center;
-
-    .bottom-btn {
-      padding: 8px 24px;
+    button{
+      min-width: 400px;
     }
   }
 }
