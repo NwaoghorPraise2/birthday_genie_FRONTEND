@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./banner.scss";
+import "./notificationBanner.scss";
 import PropTypes from "prop-types";
 
 // props, variant can only be default or success, message is the notification message, showBanner state is a boolean, onClose, is a function to close the banner, top is to position the banner better from the top of the screen
@@ -7,7 +7,6 @@ function NotificationBanner({
   variant = "default",
   message,
   showBanner = false,
-  onClose,
   top = "120px",
 }) {
   const [banner, setBanner] = useState("");
@@ -20,12 +19,12 @@ function NotificationBanner({
 
   function handleCloseBanner() {
     setBanner("hidden");
-    onClose();
   }
+
   return (
     <div className={`banner-container ${banner}`}>
       <div
-        className={`notif-banner ${variant}  `}
+        className={`notif-banner ${variant}`}
         style={{
           top: top,
         }}
@@ -46,6 +45,5 @@ NotificationBanner.propTypes = {
   variant: PropTypes.oneOf(["default", "success"]),
   message: PropTypes.string.isRequired,
   showBanner: PropTypes.bool.isRequired,
-  onClose: PropTypes.func.isRequired,
   top: PropTypes.string,
 };

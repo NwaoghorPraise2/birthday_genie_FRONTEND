@@ -1,10 +1,10 @@
 import { useState } from "react";
-import "./nav.scss";
+import "./topBar.scss";
 
 import { Link } from "react-router-dom";
 import { useDashboardContext } from "../../../contexts/dashboardContext";
 
-function TopNav() {
+function TopBar() {
   const [value, setValue] = useState("");
 
   const onChangeValue = (inputValue) => {
@@ -15,8 +15,9 @@ function TopNav() {
     e.preventDefault();
     console.log(`Searching for: ${value}`);
   };
+
   return (
-    <nav className="nav">
+    <nav className="TopBar">
       <Logo />
 
       <div className="srch">
@@ -32,7 +33,7 @@ function TopNav() {
   );
 }
 
-export default TopNav;
+export default TopBar;
 
 function Logo() {
   return (
@@ -78,11 +79,26 @@ function Icons() {
     setValue(value);
   };
 
+  const handleExpand = () => {
+    if (open.input === true) {
+      setOpen({
+        nav: false,
+        input: false,
+      });
+      return;
+    }
+    setOpen({
+      nav: false,
+      input: true,
+    });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(`Searching for: ${value}`);
     setOpen({ nav: false, input: false });
   };
+
   return (
     <div className="icons">
       {icons.map((icon, index) => (
@@ -102,12 +118,7 @@ function Icons() {
         </div>
         <button
           className={`${open.input ? "hidden" : "active"}`}
-          onClick={() => {
-            setOpen({
-              nav: false,
-              input: true,
-            });
-          }}
+          onClick={handleExpand}
         >
           <img src="/imgs/searchIcon.png" alt="logo" />
         </button>

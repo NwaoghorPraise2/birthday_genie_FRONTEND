@@ -3,7 +3,7 @@ import "./heroShowcase.scss";
 const HeroShowcase = ({ mainImg, miniImgs }) => {
   return (
     <div className="HeroShowcase">
-      <div className="main">
+      <div className="main_img_row">
         <img src={mainImg} alt="main hero photo" />
       </div>
       <div className="mini_img_row">

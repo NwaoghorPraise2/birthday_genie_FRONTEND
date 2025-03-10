@@ -18,7 +18,7 @@ import Login from "./pages/auth/login/login";
 // Dashboard
 import DashBoard from "./pages/dashboard/home/home";
 import Friends from "./pages/dashboard/friends/friends";
-import TopNav from "./components/ui/topBar/nav";
+import TopBar from "./components/ui/topBar/topBar";
 import SideBar from "./components/ui/sideBar/sideBar";
 import { DashboardContext } from "./contexts/dashboardContext";
 import Notifications from "./pages/dashboard/notifications/notifications";
@@ -50,7 +50,7 @@ const DashboardLayout = () => {
     <DashboardContext>
       <div className="Dashboard">
         <ScrollToTop>
-          <TopNav />
+          <TopBar />
           <main className="main">
             <SideBar />
             <div className="main-page">

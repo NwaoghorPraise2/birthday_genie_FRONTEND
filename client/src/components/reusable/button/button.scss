@@ -51,12 +51,12 @@ a {
   &.cornered {
     border-radius: 8px;
     padding: 4px 8px;
-    gap: 10px;
     font-weight: 500;
-    font-size: $font-text-lg;
+    gap: 10px;
+    font-size: $font-text-md;
 
     @include sm {
-      font-size: $font-text-md;
+      font-size: $font-text-sm;
     }
   }
 

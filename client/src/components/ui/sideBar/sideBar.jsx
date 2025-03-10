@@ -10,7 +10,7 @@ const SideBar = () => {
   const { openNav, togglenNav } = useDashboardContext();
 
   return (
-    <aside className="aside">
+    <aside className="sidebar">
       <div className={`side-bar ${openNav ? "open" : "close"} `}>
         <div className="top-nav">
           {routes.map((route) => (
